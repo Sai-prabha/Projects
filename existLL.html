@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landlords List</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .table-hover tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-3 text-center">Please Select an Option</h1>
+        <nav class="nav nav-pills nav-justified">
+          <a id="landlordButton" class="nav-item nav-link" href="home.html" onclick="loadLandlordContent()">LandLord</a>
+          <a id="tenantButton" class="nav-item nav-link" href="home.html" onclick="loadTenantContent()">Tenant</a>
+          <a id="contractButton" class="nav-item nav-link" href="contract.html">Contract</a>
+          <a id="existLL" class="nav-item nav-link" href="existLL.html">Existing LandLords</a>
+          <a id="existT" class="nav-item nav-link" href="existT.html">Existing Tenants</a>
+          <a id="existContracts" class="nav-item nav-link" href="existContracts.html">Existing Contracts</a>
+        </nav>
+        <h1 class="mb-3 text-center">Landlords List</h1>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Town</th>
+                    <th scope="col">County</th>
+                    <th scope="col">Eircode</th>
+                    <th scope="col">DOB</th>
+                    <th scope="col">Permission to Rent</th>
+                    <th scope="col">Permission for Contact</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="landlordsTable">
+                <!-- Landlords data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        getData();
+    </script>
+</body>
+</html>

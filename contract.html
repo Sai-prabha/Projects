@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-3 text-center">Please Select an Option</h1>
+        <nav class="nav nav-pills nav-justified">
+          <a id="landlordButton" class="nav-item nav-link" href="home.html#">LandLord</a>
+          <a id="tenantButton" class="nav-item nav-link" href="home.html#">Tenant</a>
+          <a id="contractButton" class="nav-item nav-link active" href="contract.html">Contract</a>
+          <a id="existLL" class="nav-item nav-link" href="existLL.html">Existing LandLords</a>
+          <a id="existT" class="nav-item nav-link" href="existT.html">Existing Tenants</a>
+          <a id="existContracts" class="nav-item nav-link" href="existContracts.html">Existing Contracts</a>
+        </nav>
+        <h1 class="mb-3">Contract Details</h1>
+        <form id="contractForm" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="contractDate" class="form-label">Contract Date:</label>
+                <input type="date" class="form-control" id="contractDate" required>
+                <div class="invalid-feedback">Please enter the contract date.</div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="propertyAddress" class="form-label">Property Address:</label>
+                <input type="text" class="form-control" id="propertyAddress" required>
+                <div class="invalid-feedback">Please enter the property address.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="cLandlord" class="form-label">Landlord:</label>
+                <select class="form-select" id="cLandlord" required>
+                    <!-- Options should be populated dynamically with landlords from the database -->
+                </select>
+                <div class="invalid-feedback">Please select a landlord.</div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="cTenants" class="form-label">Tenant(s):</label>
+                <select class="form-select" id="cTenants" required multiple>
+                    <!-- Options should be populated dynamically with tenants from the database -->
+                </select>
+                <div class="invalid-feedback">Please select at least one tenant.</div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="monthlyFee" class="form-label">Fee (Monthly) (€):</label>
+                <input type="number" class="form-control" id="monthlyFee" required>
+                <div class="invalid-feedback">Please enter the monthly fee.</div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="propertyDoorNumber" class="form-label">Property Door Number:</label>
+                <input type="text" class="form-control" id="propertyDoorNumber" required>
+                <div class="invalid-feedback">Please enter the property door number.</div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="contractLength" class="form-label">Contract Length:</label>
+                <select class="form-select" id="contractLength" required>
+                    <option value="">Choose...</option>
+                    <option value="Month">Month</option>
+                    <option value="Year">Year</option>
+                    <option value="Permanent">Permanent</option>
+                </select>
+                <div class="invalid-feedback">Please select the contract length.</div>
+            </div>
+    
+            <div class="mb-3">
+                <label for="propertyType" class="form-label">Property Type:</label>
+                <select class="form-select" id="propertyType" required>
+                    <option value="">Choose...</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Semi-Detached">Semi-Detached</option>
+                    <option value="Detached">Detached</option>
+                    <option value="Other">Other (specify)</option>
+                </select>
+                <input type="text" class="form-control mt-2 d-none" id="otherPropertyType" placeholder="Specify property type">
+                <div class="invalid-feedback">Please select the property type.</div>
+            </div>
+    
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="form.js"></script>
+    <script src="contractFill.js"></script>
+</body>
+</html>
